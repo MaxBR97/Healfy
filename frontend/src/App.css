@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -42,5 +42,26 @@
 }
 
 .tasks-container {
-  color: blue;
+  display: flex;
+  color: rgb(10, 10, 10);
+
+  
 }
+
+.task-card {
+  margin:10px;
+  border-color: black;
+  background-color: rgb(138, 138, 177);
+}
+
+button {
+  color:rgb(188, 188, 188);
+  background-color: rgb(7, 87, 208);
+  margin:10px;
+}
+
+.create-task-form {
+  display: grid;
+  padding-top: 100px;
+}
+

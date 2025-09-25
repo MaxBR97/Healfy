@@ -4,19 +4,12 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [tasks, setTasks] = useState([{
-    id: 1,
-    title: 'Task 1',
-    description: 'Description',
-    completed: false,
-    createdAt: new Date(),
-    priority: 'medium',
-  }])
+  const [tasks, setTasks] = useState([])
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [completed, setCompleted] = useState(false);
-  const [priority, setPriority] = useState('');
+  const [priority, setPriority] = useState('medium');
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
@@ -130,12 +123,13 @@ function App() {
 
       <div className='tasks-container'>
         {tasks.map((task) => (
-          <div key={task.id}>
-            <h2>{task.title} - {task.id}</h2>
-            <div>{task.description}</div>
-            <div>{task.completed.toString()}</div>
-            <div>{task.createdAt.toLocaleString()}</div>
-            <div>{task.priority}</div>
+          <div key={task.id} className='task-card'>
+            <h2>{task.title}</h2>
+            <div>ID: {task.id}</div>
+            <div>Description: {task.description}</div>
+            <div>Completed: {task.completed.toString()}</div>
+            <div>Created At: {task.createdAt.toLocaleString()}</div>
+            <div>Priority: {task.priority}</div>
             <button onClick={() => deleteTask(task.id)}>Delete</button>
             {/* <button onClick={() => updateTask(task.id)}>Update</button> */}
             <button onClick={() => toggleTask(task.id)}>Toggle</button>
