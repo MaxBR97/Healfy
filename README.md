@@ -14,5 +14,5 @@
 - PATCH /api/tasks/:id/toggle
 
 
-##Time Spent On Each Part
+## Time Spent On Each Part
 I didnt work as suggested, I implemented frontend and backend simulatneously
