@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add more styles as needed based on the assignment requirements */ 
