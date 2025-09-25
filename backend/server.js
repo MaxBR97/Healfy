@@ -27,6 +27,13 @@ app.get('/api/tasks', (req, res) => {
 
 app.post('/api/tasks', (req, res) => {
   const { title, description, completed, priority } = req.body;
+  if(completed.toString() != 'false' && completed.toString() != 'true'){
+    res.status(400).send({ message: 'completed not boolean' });
+    return;
+  } else if(priority !== 'low' && priority !== 'medium' && priority !== 'high'){
+    res.status(400).send({ message: 'priority not valid' });
+    return;
+  }
   const task = { id: ++id, title, description, completed, createdAt: new Date().toLocaleString(), priority };
   tasks[id] = task;
   res.status(200).send(task);

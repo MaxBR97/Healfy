@@ -15,4 +15,4 @@
 
 
 ##Time Spent On Each Part
-I didnt work as suggested, I implemented frontend and backend simulatneaously
+I didnt work as suggested, I implemented frontend and backend simulatneously
